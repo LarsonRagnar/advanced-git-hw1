@@ -1,0 +1,12 @@
+---
+- name: Find available IPs in the network
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Scan the network for available IPs
+      ansible.builtin.command: nmap -sn 192.168.111.0/24
+      register: scan_result
+
+    - name: Show scan results
+      debug:
+        var: scan_result.stdout_lines
