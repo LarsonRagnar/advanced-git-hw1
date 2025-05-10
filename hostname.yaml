@@ -1,0 +1,9 @@
+---
+- name: Gather hostname from devices
+  hosts: all
+  gather_facts: yes
+
+  tasks:
+    - name: Display hostname
+      debug:
+        msg: "Hostname of the device is {{ ansible_hostname }}"
