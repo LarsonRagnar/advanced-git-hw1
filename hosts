@@ -1,7 +1,6 @@
 [all]
-#localhost ansible_host=localhost
+localhost ansible_host=localhost
 1 ansible_host=192.168.111.1
 2 ansible_host=192.168.111.244
 3 ansible_host=192.168.111.250
 4 ansible_host=192.168.111.241
-5
